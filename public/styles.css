@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #1a1a1a;
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.section {
+    display: none;
+}
+
+#auth-section {
+    display: block; /* Default visible section */
+}
+
+.auth-container {
+    background: #2a2a2a;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.auth-container h2 {
+    margin-bottom: 20px;
+    color: #fefbfb;
+}
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #3a3a3a;
+    border: 1px solid #4a4a4a;
+    border-radius: 8px;
+    color: #e0e0e0;
+}
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: #00aaff;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.auth-container button:hover {
+    background: #0088cc;
+}
+.auth-container p {
+    margin-top: 20px;
+}
+.auth-container a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.role-container {
+    background: #2a2a2a;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.role-container h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.role-container button {
+    padding: 12px 20px;
+    margin: 10px;
+    background: #00aaff;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.role-container button:hover {
+    background: #0088cc;
+}
+.role-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #3a3a3a;
+    border: 1px solid #4a4a4a;
+    border-radius: 8px;
+    color: #e0e0e0;
+}
+
+.home-container {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.home-container h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.home-container button {
+    padding: 10px 20px;
+    background: #00aaff;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.home-container button:hover {
+    background: #0088cc;
+}
+.room-management input {
+    padding: 10px;
+    background: #3a3a3a;
+    border: 1px solid #4a4a4a;
+    border-radius: 8px;
+    color: #e0e0e0;
+    margin-right: 10px;
+}
+.room-item, .member-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.room-item button, .member-item button {
+    padding: 5px 10px;
+    background: #666;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.room-item button:hover, .member-item button:hover {
+    background: #888;
+}
+.member-item img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-container {
+    background: #2a2a2a;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+.header {
+    padding: 10px;
+    border-bottom: 1px solid #4a4a4a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h2 {
+    font-size: 20px;
+    color: #ffffff;
+}
+.progress-bar {
+    width: 100%;
+    background: #3a3a3a;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #00aaff;
+    transition: width 0.3s ease;
+}
+.progress-text {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.task-list {
+    padding: 10px;
+    border-bottom: 1px solid #4a4a4a;
+}
+.task-list input {
+    padding: 10px;
+    background: #3a3a3a;
+    border: 1px solid #4a4a4a;
+    border-radius: 8px;
+    color: #e0e0e0;
+    margin-right: 10px;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.task-item input[type="checkbox"] {
+    cursor: pointer;
+}
+.task-item label {
+    flex: 1;
+}
+.task-item button {
+    padding: 5px 10px;
+    background: #666;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.task-item button:hover {
+    background: #888;
+}
+.messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+.message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.message.sent {
+    justify-content: flex-end;
+}
+.message-content {
+    background: #3a3a3a;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+}
+.message.sent .message-content {
+    background: #00aaff;
+    color: #ffffff;
+}
+.message img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.message .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.message .username {
+    font-weight: bold;
+    font-size: 14px;
+}
+.pin-btn {
+    padding: 5px;
+    background: #666;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.pin-btn:hover {
+    background: #888;
+}
+.message.pinned .message-content {
+    border: 2px solid #ffff00;
+}
+.input-area {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #4a4a4a;
+}
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    background: #3a3a3a;
+    border: 1px solid #4a4a4a;
+    border-radius: 8px;
+    color: #e0e0e0;
+}
+.input-area button {
+    padding: 10px 20px;
+    background: #00aaff;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.input-area button:hover {
+    background: #0088cc;
+}
+.back-btn {
+    padding: 5px 10px;
+    background: #666;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.back-btn:hover {
+    background: #888;
+}

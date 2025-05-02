@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamSync</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="auth-section" class="section">
+        <div class="auth-container">
+            <h2 id="auth-title">Sign Up</h2>
+            <form id="auth-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="file" id="profile-picture" accept="image/*">
+                <button type="submit">Submit</button>
+                <p id="auth-toggle">Already have an account? <a href="#" onclick="toggleAuth()">Log In</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="role-selection-section" class="section">
+        <div class="role-container">
+            <h2>Select Your Role</h2>
+            <button onclick="setRole('manager')">Manager</button>
+            <button onclick="showMemberForm()">Member</button>
+            <div id="member-form" style="display: none;">
+                <input type="text" id="referral-code" placeholder="Enter Referral Code">
+                <button onclick="setRole('member')">Submit</button>
+            </div>
+            <p id="referral-display" style="display: none;">Your referral code: <span id="referral-code-value"></span></p>
+        </div>
+    </div>
+
+    <div id="admin-home-section" class="section">
+        <div class="home-container">
+            <h2>Admin Dashboard</h2>
+            <button onclick="logout()">Logout</button>
+            <div class="room-management">
+                <input type="text" id="room-name" placeholder="New Room Name">
+                <button onclick="addRoom()">Add Room</button>
+                <div id="room-list"></div>
+            </div>
+            <div class="team-members">
+                <h3>Team Members</h3>
+                <div id="team-members-list"></div>
+            </div>
+            <p>Your referral code: <span id="admin-referral-code"></span></p>
+        </div>
+    </div>
+
+    <div id="member-home-section" class="section">
+        <div class="home-container">
+            <h2>Member Dashboard</h2>
+            <button onclick="logout()">Logout</button>
+            <div id="member-room-list"></div>
+        </div>
+    </div>
+
+    <div id="admin-chat-section" class="section">
+        <div class="chat-container">
+            <div class="header">
+                <button class="back-btn" onclick="showSection('admin-home-section')">Back</button>
+                <h2 id="admin-chat-title">Chat Room</h2>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="admin-progress"></div>
+            </div>
+            <div class="progress-text" id="admin-progress-text">Progress: 0%</div>
+            <div class="task-list" id="admin-task-list">
+                <input type="text" id="task-name" placeholder="New Task">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            <div class="messages" id="admin-messages"></div>
+            <div class="input-area">
+                <input type="text" id="admin-chat-input" placeholder="Type a message...">
+                <button onclick="sendMessage('admin')">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="member-chat-section" class="section">
+        <div class="chat-container">
+            <div class="header">
+                <button class="back-btn" onclick="showSection('member-home-section')">Back</button>
+                <h2 id="member-chat-title">Chat Room</h2>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="member-progress"></div>
+            </div>
+            <div class="progress-text" id="member-progress-text">Progress: 0%</div>
+            <div class="task-list" id="member-task-list"></div>
+            <div class="messages" id="member-messages"></div>
+            <div class="input-area">
+                <input type="text" id="member-chat-input" placeholder="Type a message...">
+                <button onclick="sendMessage('member')">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="private-chat-section" class="section">
+        <div class="chat-container">
+            <div class="header">
+                <button class="back-btn" onclick="showSection('admin-home-section')">Back</button>
+                <h2 id="private-chat-title">Private Chat</h2>
+            </div>
+            <div class="messages" id="private-messages"></div>
+            <div class="input-area">
+                <input type="text" id="private-chat-input" placeholder="Type a message...">
+                <button onclick="sendMessage('private')">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="fallback" class="section">Loading TeamSync... If this persists, check console (F12).</div>
+    <script src="scripts.js"></script>
+</body>
+</html>
