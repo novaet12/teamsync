@@ -2,7 +2,7 @@
 
 ![TeamSync Logo](https://via.placeholder.com/150) <!-- Replace with actual logo if available -->
 
-TeamSync is a modern, full-stack team collaboration platform designed to enhance team productivity and communication. Built with scalability and user experience in mind, it provides a comprehensive suite of features for effective team management and collaboration.
+TeamSync is a modern, full-stack team collaboration platform designed to enhance team productivity and communication . Built with scalability and user experience in mind, it provides a comprehensive suite of features for effective team management and collaboration(done for full stack web project for software engineering course in fourth year computer engineering major).
 
 ## 🚀 Features
 
@@ -146,12 +146,8 @@ We welcome contributions! Please follow these steps:
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the  License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
-
-For support, please open an issue in the GitHub repository or contact the development team.
-
+nyboss04@gmail.com
 ---
-
-Built with ❤️ by the TeamSync Development Team
