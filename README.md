@@ -51,7 +51,7 @@ jemaw is a  full-stack team collaboration platform designed to enhance team prod
 ## 📦 Project Structure
 
 ```
-teamsync/
+jemaw/
 ├── public/              # Frontend assets
 │   ├── index.html      # Main application entry
 │   ├── styles.css      # Global styles
